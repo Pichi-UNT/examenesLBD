@@ -1,0 +1,2 @@
+-- Iniciar servicio de mysql
+sudo systemctl start mysql.service
