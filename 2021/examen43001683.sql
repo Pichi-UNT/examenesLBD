@@ -290,6 +290,5 @@ DELIMITER ;
 
 DELETE FROM Direcciones WHERE idDireccion=1;
 DELETE FROM Direcciones WHERE idDireccion=6;
-SELECT * FROM Personal;
-SELECT * FROM Direcciones WHERE idDireccion=6;
+
 
