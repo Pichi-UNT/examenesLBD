@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS 
+CREATE TABLE IF NOT EXISTS
 (
     -- add columns
     -- set primary key

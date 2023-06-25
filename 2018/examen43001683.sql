@@ -266,8 +266,8 @@ BEGIN
 
     SET vUltimoID = (SELECT COALESCE(MAX(idTrabajo), 1) FROM Trabajos);
 
-    INSERT INTO Trabajos (idTrabajo, titulo, area, fechaPresentacionn, fechaAprobacion)
-    VALUES (vUltimoID + 1, pTitulo, pArea, pFechaPresentacion, pFechaAprobacion);
+    INSERT INTO Trabajos (idTrabajo, titulo,duracion,area, fechaPresentacionn, fechaAprobacion)
+    VALUES (vUltimoID + 1, pTitulo, pDuracion,pArea, pFechaPresentacion, pFechaAprobacion);
 
     SET pMensaje = 'Insercion exitosa';
 
@@ -276,7 +276,7 @@ END //
 
 DELIMITER ;
 
-CALL NuevoTrabajo('AGUSTIN', 7, 'Hardware', '2023-4-5',
+CALL NuevoTrabajo('AGUSTIN', 22, 'Hardware', '2023-4-5',
                   '2023-5-5', @Mensaje);
 SELECT @Mensaje;
 
@@ -350,6 +350,9 @@ BEGIN
 END //
 
 DELIMITER ;
+
+select *
+from aud_trabajos;
 
 INSERT INTO Trabajos (idTrabajo, titulo, area,duracion, fechaPresentacionn, fechaAprobacion, fechaFinalizacion)
 VALUES (10000,'asdsad','Hardware',22,'2020-2-2','2023-2-2',NULL);
